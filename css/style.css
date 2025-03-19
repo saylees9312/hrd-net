@@ -1,0 +1,315 @@
+@charset 'utf-8';
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov.min.css');
+
+:root {
+  --width: 1900;
+  --designWidth: 1248;
+  --col_blue: #4d65e1;
+  --col_skyblue: #4195e3;
+  --col_skyblue_light: #f3f8ff;
+  --col_green: #62d491;
+  --col_green2: #117935;
+  --col_lightgreen: #6aa10a;
+  --col_orange: #f0651f;
+  --col_navy: #39425d;
+  --col_cyan: #06a0aa;
+  --col_pink: #ff0046;
+  --col_pink2: #e77bc8;
+  --col_magenta: #ff00d6;
+  --col_yellow: #af8f1b;
+  --col_purple: #9e00ff;
+  --col_h: #111;
+  --col_body: #333;
+  --col_p: #555;
+  --col_dis: #888;
+  --col_white: #fff;
+  --col_tabe: #ccc;
+  --col_btn: #ddd;
+  --col_button: #757575;
+  --col_border: #eee;
+  --col_bg: #f5f5f5;
+  --col_box_bg: #f8f8f8;
+  --col_red: #e0024b;
+  --col_darkred: #b21116;
+  --col_gray: #757575;
+  --col_brown: #a95a12;
+  --col_brown2: #af8f1b;
+  --col_header_line: #5dc488;
+  --col_homegreen: #29c78e;
+  --col_brightyellow: #fef101;
+  --swiper-centered-offset-before: none;
+  --swiper-centered-offset-after: none;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  color: #fff;
+}
+
+body {
+  font: 1.6rem/1.5 'Pretendard GOV', sans-serif;
+  word-break: break-all;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+hr,
+.hidden {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+}
+
+.inner {
+  width: 124.8rem;
+  margin: 0 auto;
+  background: skyblue;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 19.3rem;
+}
+
+.header-top p {
+  height: 3.6rem;
+  width: 100%;
+  padding: 0 33.6rem;
+  background: #edf1f5;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.header-top-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0 33.6rem;
+  position: relative;
+}
+
+.header-top-list::before {
+  content: '';
+  width: 100%;
+  height: 4rem;
+  background: var(--col_header_line);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.header-top-list::after {
+  content: '';
+  width: 100%;
+  height: 4.4rem;
+  background: var(--col_white);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.user-list a {
+  display: block;
+  width: 12rem;
+  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-top-list .user-list {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.user-list li {
+  /* border: 1px solid var(--col_green2); */
+  background: var(--col_white);
+}
+
+.header-top-list:last-child > li {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.util-list {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background: var(--col_white);
+}
+
+.util-list li a {
+  display: block;
+  padding: 8px;
+  font-size: 1.4rem;
+  line-height: 1.714;
+}
+
+#header nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 33.6rem;
+  background: var(--col_white);
+}
+
+.gnb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gnb > li {
+  position: relative;
+}
+
+.gnb > li > a {
+  display: block;
+  padding: 2.4rem 4.4rem;
+  height: 7.6rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background: pink;
+  display: none;
+}
+
+.submenu li a {
+  display: block;
+  padding: 6px 0;
+  line-height: 1.375;
+}
+
+section.search {
+  width: 100%;
+  height: 35rem;
+  padding: 5rem 0;
+  margin-top: 19.3rem;
+  /* background: yellowgreen; */
+}
+
+.search-con {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-box {
+  border: 1px solid violet;
+  width: 70rem;
+  height: 25rem;
+}
+
+.search-check {
+  margin-top: 4.7rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 1.5rem;
+}
+
+.search-input {
+  margin-top: 1.5rem;
+  width: 68.2rem;
+  height: 6.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input input {
+  width: 41.3rem;
+  height: 4.5rem;
+}
+
+.search-recommended {
+  width: 68.2rem;
+  height: 7.2rem;
+  margin-top: 1.6rem;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 8px;
+}
+
+.search-recommended > p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  word-break: keep-all;
+  margin: 1rem 2.4rem 0 2.4rem;
+}
+
+.recommended-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  align-items: start;
+  width: 100%;
+  height: 8rem;
+  padding: 6px;
+  gap: 8px;
+}
+
+.recommended-list li {
+  color: #555;
+  background: var(--col_bg);
+  border-radius: 1.6rem;
+  overflow: hidden;
+}
+
+.recommended-list li a {
+  padding: 0 1.2rem;
+  height: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+}

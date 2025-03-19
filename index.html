@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hrd-net</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- s: -->
+    <header id="header">
+      <nav class="skip hidden">
+        <a href="#">본문 바로가기</a>
+        <a href="#">주메뉴 바로가기</a>
+        <a href="#">퀵메뉴 바로가기</a>
+        <a href="#">채용정보와 일자리 추천 바로가기</a>
+        <a href="#">초보자 이용 가이드 바로가기</a>
+        <a href="#">고용24 소식 바로가기</a>
+      </nav>
+      <div class="header-top">
+        <p>이 누리집은 대한민국 공식 전자정부 누리집입니다.</p>
+        <ul class="header-top-list">
+          <li>
+            <ul class="user-list">
+              <li><a href="#">개인</a></li>
+              <li><a href="#">기업</a></li>
+            </ul>
+          </li>
+          <li>
+            <ul class="util-list">
+              <li><a href="#">로그인</a></li>
+              <li><a href="#">회원가입</a></li>
+              <li><a href="#">이용안내</a></li>
+              <li><a href="#">질문과 답변</a></li>
+              <li><a href="#">원격지원</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <nav>
+        <h1 class="logo">
+          <a href="#"><img src="https://www.work24.go.kr/cm/static/images/main_new/h1_ci.png" alt="고용노동부" /></a>
+        </h1>
+        <ul class="gnb">
+          <li>
+            <a href="#"> 채용정보 </a>
+            <ul class="submenu submenu1">
+              <li>
+                <a href="#">일자리 찾기</a>
+              </li>
+              <li><a href="#">구직신청</a></li>
+              <li><a href="#">채용행사</a></li>
+              <li><a href="#">강소기업</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"> 취업지원 </a>
+            <ul class="submenu submenu2">
+              <li><a href="#">취업역량강화</a></li>
+              <li><a href="#">취업가이드</a></li>
+              <li><a href="#">국민취업지원제도</a></li>
+              <li><a href="#">미래내일 일경험</a></li>
+              <li><a href="#">취업지원금</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"> 실업급여 </a>
+            <ul class="submenu submenu3">
+              <li><a href="#">수급자격</a></li>
+              <li><a href="#">실업인정</a></li>
+              <li><a href="#">취업촉진수당</a></li>
+              <li><a href="#">이직확인서</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"> 직업 능력개발 </a>
+            <ul class="submenu submenu4">
+              <li><a href="#">훈련찾기·신청</a></li>
+              <li><a href="#">국민내일배움카드</a></li>
+              <li><a href="#">훈련기관·강사</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#"> 출산휴가·육아휴직 </a>
+            <ul class="submenu submenu5">
+              <li><a href="#">출산휴가</a></li>
+              <li><a href="#">육아휴직</a></li>
+            </ul>
+          </li>
+        </ul>
+        <a href="#" class="menu">전체메뉴</a>
+      </nav>
+    </header>
+    <hr />
+    <!-- //e: -->
+    <!-- s: -->
+    <main id="main">
+      <section class="section section1 search">
+        <div class="inner">
+          <div class="search-con">
+            <div class="search-box">
+              <h2 class="hidden">검색안내</h2>
+              <div class="search-check">
+                <input type="checkbox" id="search-all" /><label for="search-all">통합검색</label>
+                <input type="checkbox" id="search-job" /><label for="search-job">일자리 검색</label>
+                <input type="checkbox" id="search-study" /><label for="search-study">직업훈련 검색</label>
+              </div>
+              <div class="search-input">
+                <ul class="search-list"></ul>
+                <input type="text" placeholder="필요한 서비스를 찾아보세요" />
+                <div class="search-icon-set">
+                  <button type="button" class="search"><b class="hidden">검색</b></button>
+                  <button type="button" class="keyboard"><b class="hidden">가상키보드 실행</b></button>
+                </div>
+              </div>
+              <div class="search-recommended">
+                <p>추천검색어</p>
+                <ul class="recommended-list">
+                  <li><a href="#">실업급여</a></li>
+                  <li><a href="#">근로계약서</a></li>
+                  <li><a href="#">육아휴직</a></li>
+                  <li><a href="#">국민내일배움카드</a></li>
+                  <li><a href="#">일자리채움 청년지원금</a></li>
+                  <li><a href="#">직업훈련</a></li>
+                  <li><a href="#">2025 대한민국 채용박람회</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="login-form">
+              <p class="login-text">고용24에 <i>로그인</i> 하시면 아래의 서비스를 이용하실 수 있어요</p>
+              <ul class="login-service">
+                <li><a href="#">내 신청 조회</a></li>
+                <li><a href="#">증명서 발급</a></li>
+                <li><a href="#">놓치고 있는 혜택 확인</a></li>
+                <li><a href="#">잡케어(직업추천, 경력관리)</a></li>
+              </ul>
+              <a href="#" class="login">로그인</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <!-- //e:section -->
+      <section class="section section2 service">
+        <div class="inner">
+          <h2 class="main-title">자주찾는 서비스</h2>
+          <div class="service-wrap">
+            <div class="swiper service-slider">
+              <!-- 스와이퍼 슬라이드 -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <a href="#"
+                    ><img src="./img/service-icon1.svg" alt="" class="service-img service-img1" />
+                    <p>실업인정 인터넷 신청</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    ><img src="./img/service-icon2.svg" alt="" class="service-img service-img1" />
+                    <p>취업특강(1차 실업 인정교육 포함)</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    ><img src="./img/service-icon3.svg" alt="" class="service-img service-img1" />
+                    <p>육아휴직 급여 신청</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    ><img src="./img/service-icon4.svg" alt="" class="service-img service-img1" />
+                    <p>구직신청</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    ><img src="./img/service-icon5.svg" alt="" class="service-img service-img1" />
+                    <p>구직촉진수당 신청</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    ><img src="./img/service-icon6.svg" alt="" class="service-img service-img1" />
+                    <p>국민내일배움카드 발급신청</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    ><img src="./img/service-icon7.svg" alt="" class="service-img service-img1" />
+                    <p>수급자격 신청자 온라인 교육</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    ><img src="./img/service-icon8.svg" alt="" class="service-img service-img1" />
+                    <p>출산전후 휴가 급여 신청</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    ><img src="./img/service-icon9.svg" alt="" class="service-img service-img1" />
+                    <p>고용허가제 신고</p>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#"
+                    ><img src="./img/service-icon10.svg" alt="" class="service-img service-img1" />
+                    <p>잡케어(직업추천, 경력관리)</p>
+                  </a>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="service-btn service-btn-prev"></div>
+              <div class="service-btn service-btn-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <!-- //e:section -->
+      <section class="section section3 support">
+        <div class="inner">
+          <div class="title-area">
+            <h2 class="main-title">지원제도</h2>
+            <p class="main-text">
+              취업과 관련한 다양한 지원 제도를 소개해 드려요. 아래에서 궁금하신 주제를 클릭해 주세요.
+            </p>
+          </div>
+          <div class="btn-users">
+            <button type="button" class="btn-user btn-user-man">개인</button>
+            <button type="button" class="btn-user btn-user-business">기업</button>
+          </div>
+          <ul class="question-list">
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>취업은 하고 싶은데, 어떻게 해야 할 지 모르겠어요</dt>
+                  <dd>기초 취업능력 키우기, 1:1 상담, 나에게 맞는 지원 추천 등</dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>취업하기 위해 공부하거나 자격증을 따고 싶어요</dt>
+                  <dd>취업과 이직에 도움이 되는 교육 / 훈련 받기</dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>내게 맞는 일자리를 찾고 싶어요</dt>
+                  <dd>일자리 추천, 다양한 일 경험, 취업지원금등</dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>출산/육아를 위해 일을 쉬거나 근무 시간을 줄여야 할 거 같아요</dt>
+                  <dd>출산(유산, 사산 포함) 급여, 육아휴직, 육아기 근로시간 단축 등</dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>최근에 어쩔 수 없이 퇴사했어요.조만 간 퇴사할 것 같아요</dt>
+                  <dd>실업급여, 재취업 수당 등</dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>나이는 좀 있지만, 다시 취업을 하고 싶습니다</dt>
+                  <dd>경력직을 위한 경력설계 컨설팅, 공공 일자리, 취업 지원금, 취업 능력 키우기 등</dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>전 장애가 있는데, 어떤 도움을 받을 수 있을까요?</dt>
+                  <dd>장애인의 취업을 위한 단계별 통합 지원프로그램, 교육/훈련 등</dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>기타 제도</dt>
+                  <dd>고용보험 등 고용 관련 기업의 의무와 알아두면 좋은 다양한 제도</dd>
+                </dl>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="etc">더보기</a>
+        </div>
+      </section>
+      <hr />
+      <!-- //e:section -->
+      <section class="section section4 recruitment">
+        <div class="inner">
+          <div class="title-area">
+            <h2 class="main-title">채용정보</h2>
+            <p class="main-text"><a href="#">로그인</a>하시면 더욱 정확한 채용정보를 추천 받을 수 있습니다</p>
+          </div>
+          <ul class="recruit-list">
+            <li>
+              <a href="#">
+                <h3>다온소아청소년과의원</h3>
+                <dl>
+                  <dt>다온소아청소년과의원</dt>
+                  <dd>남구 야음동 병원 미화원 구인 [울산양 산경총 중장년내일센터]</dd>
+                  <dd>
+                    <ul class="recruit-info">
+                      <li>울산 남구</li>
+                      <li>월급 105 만원 ~ 109 만원</li>
+                      <li>정보제공처: 고용24</li>
+                    </ul>
+                  </dd>
+                </dl>
+                <p>채용시까지</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h3>만세재가어르신돌봄센터</h3>
+                <dl>
+                  <dt>만세재가어르신돌봄센터</dt>
+                  <dd>[남산동] 4등급 어르신 재가요양보호사 모집</dd>
+                  <dd>
+                    <ul class="recruit-info">
+                      <li>대구 중구</li>
+                      <li>시급 10,030 원 ~ 10,030 원</li>
+                      <li>정보제공처: 고용24</li>
+                    </ul>
+                  </dd>
+                </dl>
+                <p>채용시까지</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h3>경희대학교</h3>
+                <dl>
+                  <dt>경희대학교</dt>
+                  <dd>경희대학교 국제캠퍼스 교무위원 공용 차량 운전 기사 채용</dd>
+                  <dd>
+                    <ul class="recruit-info">
+                      <li>경기 용인시 기흥구</li>
+                      <li>월급 220 만원 ~ 282 만원</li>
+                      <li>정보제공처: 고용24</li>
+                    </ul>
+                  </dd>
+                </dl>
+                <p>채용시까지</p>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <h3>한국원산지정보원</h3>
+                <dl>
+                  <dt>한국원산지정보원</dt>
+                  <dd>2025년 제1차 한국원산지정보원 직원 채용 재공고</dd>
+                  <dd>
+                    <ul class="recruit-info">
+                      <li>경기도</li>
+                      <li>연봉 회사내규에 따름</li>
+                      <li>정보제공처: 알리오</li>
+                    </ul>
+                  </dd>
+                </dl>
+                <p>2025-03-31 (D-12)</p>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="etc">더보기</a>
+        </div>
+      </section>
+      <hr />
+      <!-- //e:section -->
+      <section class="section section5 banner">
+        <div class="inner">
+          <h2 class="hidden">고용24 홍보</h2>
+          <div class="banner-wrap">
+            <div class="swiper banner-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.work24.go.kr/cm/common/directStaticImg3ndView.do?encAthflSeq=lVaTTgl7qsui3v3c7fIXpw%3d%3d&atchFsno=1"
+                    alt=""
+                    class="banner-img banner-img1"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.work24.go.kr/cm/common/directStaticImg3ndView.do?encAthflSeq=ZXty%2fneObZnjcOTefbgw7g%3d%3d&atchFsno=1"
+                    alt=""
+                    class="banner-img banner-img2"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.work24.go.kr/cm/common/directStaticImg3ndView.do?encAthflSeq=RC9wXQg74azl61fXHZvdqQ%3d%3d&atchFsno=1"
+                    alt=""
+                    class="banner-img banner-img3"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.work24.go.kr/cm/common/directStaticImg3ndView.do?encAthflSeq=QBaqGJkbrR0MIe6g0V5Qwg%3d%3d&atchFsno=1"
+                    alt=""
+                    class="banner-img banner-img4"
+                  />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="https://www.work24.go.kr/cm/common/directStaticImg3ndView.do?encAthflSeq=NaQeAa%2fz7uughfhMN%2f92xA%3d%3d&atchFsno=1"
+                    alt=""
+                    class="banner-img banner-img5"
+                  />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="btn-banner btn-banner-prev"></div>
+              <div class="btn-banner btn-banner-next"></div>
+              <button type="button" class="btn-slide-controll"></button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <!-- //e:section -->
+      <section class="section section6 guide">
+        <div class="inner">
+          <div class="title-area">
+            <h2 class="main-title">고용24 이용가이드</h2>
+          </div>
+          <ul class="guide-list">
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>회원가입 방법</dt>
+                  <dd>회원 유형 선택, 14세 이상 · 미만의 가입 방법을 알려드려요.</dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>구직 등록 방법</dt>
+                  <dd>보다 쉽고 간편해진 구직 서비스를 만나보세요.</dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>검색 방법</dt>
+                  <dd>채용, 훈련, 제도 등 다양한 정보를 검색해 보세요.</dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>잡케어 활용 방법</dt>
+                  <dd>진로 탐색부터 경력개발, 취업까지 한 번에 해결해 보세요.</dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>맞춤서비스 설정 방법(채용정보, 훈련정보)</dt>
+                  <dd>원하시는 조건을 설정하면 나에게 맞는 정보를 소개해 드려요.</dd>
+                </dl>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <dl>
+                  <dt>모의계산</dt>
+                  <dd>구직급여, 모성보호 수급 시 받을 수 있는 금액을 계산해 보세요.</dd>
+                </dl>
+              </a>
+            </li>
+          </ul>
+          <a href="#" class="etc">더보기</a>
+        </div>
+      </section>
+      <hr />
+      <!-- //e:section -->
+      <section class="section section7 news">
+        <div class="inner">
+          <div class="title-area">
+            <h2 class="main-title">고용24 소식</h2>
+          </div>
+          <div class="new-btns">
+            <button type="button" class="btn-news btn-news1">전체</button>
+            <button type="button" class="btn-news btn-news2">뉴스</button>
+            <button type="button" class="btn-news btn-news3">공지사항</button>
+            <button type="button" class="btn-news btn-news4">서식자료실</button>
+          </div>
+          <div class="news-wrap">
+            <div class="swiper news-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <ul class="news-list">
+                    <li>
+                      <a href="#">
+                        <p>뉴스</p>
+                        <dl>
+                          <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                          <dd>2025-03-18</dd>
+                          <dd>
+                            한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항 항공지원센터
+                            2층에 위치한 항공일자리 취업지원센터에서 국토…
+                          </dd>
+                        </dl>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>뉴스</p>
+                        <dl>
+                          <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                          <dd>2025-03-18</dd>
+                        </dl>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>뉴스</p>
+                        <dl>
+                          <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                          <dd>2025-03-18</dd>
+                        </dl>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>공지</p>
+                        <dl>
+                          <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                          <dd>2025-03-19</dd>
+                          <dd>
+                            안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                            구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                          </dd>
+                        </dl>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>공지</p>
+                        <dl>
+                          <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                          <dd>2025-03-13</dd>
+                        </dl>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>공지</p>
+                        <dl>
+                          <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                          <dd>2025-03-11</dd>
+                        </dl>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>자료</p>
+                        <dl>
+                          <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                          <dd>2025-01-03</dd>
+                        </dl>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <p>자료</p>
+                        <dl>
+                          <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                          <dd>2025-01-03</dd>
+                        </dl>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+              <div class="news-btn news-btn-prev"></div>
+              <div class="news-btn news-btn-prev"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <hr />
+    <!-- //e: -->
+    <!-- s: -->
+    <footer id="footer">
+      <div class="inner">
+        <div class="foot-top">
+          <ul class="family-list"></ul>
+          <ul class="extra-list"></ul>
+        </div>
+        <div class="foot-con">
+          <div class="foot-con-left">
+            <div class="foot-con-logo">
+              <img src="https://www.work24.go.kr/cm/static/images/main_new/h1_ci.png" alt="" />
+            </div>
+            <div class="foot-adress">
+              <p>(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</p>
+              <p>
+                <strong>홈페이지 전산 이용 문의 1577-7114</strong> (유료, 한국고용정보원 고객상담센터, 평일 09시 ~ 18시)
+              </p>
+              <p>
+                <strong>고용·노동 분야 제도 문의 국번없이 1350</strong> (유료, 고용노동부 고객상담센터, 평일 09시 ~
+                18시)
+              </p>
+            </div>
+            <div class="foot-warning">
+              <p>고용24는 <strong>통신판매중개자</strong>이며, 통신판매의 당사자가 아닙니다.</p>
+              <p>
+                상품(훈련), 상품(훈련)정보, 거래에 관한 <strong>의무와 책임은 판매자(훈련기관)</strong>에게 있습니다.
+              </p>
+            </div>
+          </div>
+          <div class="foot-con-right">
+            <a href="#">이용안내</a>
+            <a href="#">원격지원</a>
+          </div>
+        </div>
+        <div class="foot-bottom">
+          <ul class="bottom-list">
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">이메일무단수집거부</a></li>
+            <li><a href="#">저작권보호정책</a></li>
+            <li><a href="#">오픈API 서비스</a></li>
+            <li><a href="#">화상상담 관리자</a></li>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">챗봇</a></li>
+          </ul>
+          <p class="copyright">
+            © 2024 Ministry of Employment and Labor, Korea Employment Information Service. All rights reserved.
+          </p>
+          <p>이 누리집은 고용노동부와 고용노동부 산하기관 한국고용정보원의 누리집 입니다.</p>
+        </div>
+      </div>
+    </footer>
+    <aside>
+      <a href="#">quickmenu </a>
+      <ul class="quickmenu">
+        <li><a href="#">고용센터찾기</a></li>
+        <li><a href="#">자주하는 질문</a></li>
+        <li><a href="#">이용안내</a></li>
+        <li><a href="#">정책/제도</a></li>
+        <li><a href="#">고객센터</a></li>
+        <li><a href="#">모의계산</a></li>
+        <li><a href="#">직종별 임금정보</a></li>
+      </ul>
+    </aside>
+    <div class="buttom-list">
+      <button type="button" class="btn-side btn-login">로그인</button>
+      <button type="button" class="btn-side btn-guide">이용안내</button>
+      <button type="button" class="btn-side btn-top"><b class="hidden">top</b></button>
+    </div>
+    <!-- //e: -->
+  </body>
+</html>
