@@ -13,4 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
       prevEl: '.service-btn-prev',
     },
   });
+
+  const bannerSwiper = new Swiper('.banner-slider', {
+    pagination: {
+      el: '.service-wrap .swiper-pagination',
+      clickable: true,
+    },
+    spaceBetween: 12,
+    navigation: {
+      nextEl: '.btn-banner-next',
+      prevEl: '.btn-banner-prev',
+    },
+  });
 });
