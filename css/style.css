@@ -81,7 +81,7 @@ hr,
 .inner {
   width: 124.8rem;
   margin: 0 auto;
-  background: skyblue;
+  /* background: khaki; */
 }
 
 #header {
@@ -90,6 +90,8 @@ hr,
   left: 0;
   width: 100%;
   height: 19.3rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .header-top p {
@@ -187,6 +189,11 @@ hr,
   background: var(--col_white);
 }
 
+.logo {
+  width: 13.6rem;
+  height: 4.8rem;
+}
+
 .gnb {
   display: flex;
   justify-content: center;
@@ -195,6 +202,22 @@ hr,
 
 .gnb > li {
   position: relative;
+}
+
+#header nav > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4.6px;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+#header nav > a::before {
+  content: '';
+  width: 3.2rem;
+  height: 3.2rem;
+  background: url(https://www.work24.go.kr/cm/static/images/main_new/ico32_category.svg) no-repeat 0 0 / contain;
 }
 
 .gnb > li > a {
@@ -215,7 +238,7 @@ hr,
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  background: pink;
+  /* background: pink; */
   display: none;
 }
 
@@ -241,7 +264,7 @@ section.search {
 }
 
 .search-box {
-  border: 1px solid violet;
+  /* border: 1px solid violet; */
   width: 70rem;
   height: 25rem;
 }
@@ -255,25 +278,171 @@ section.search {
   padding: 0 1.5rem;
 }
 
+.search-check label {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--col_button);
+  gap: 5px;
+}
+
+.search-check label::before {
+  content: '';
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_default.png) no-repeat 50% / contain;
+}
+
+.search-check label span {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+}
+
+.search-check label span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--col_blue);
+  width: 0;
+  height: 6px;
+  transition: 0.3s;
+}
+
+.search-check label:hover span::after {
+  right: 0;
+  animation: span-dash 0.3s both;
+}
+
+@keyframes span-dash {
+  0% {
+    left: 0;
+    width: 0;
+  }
+  100% {
+    right: 0;
+    width: 100%;
+  }
+}
+
 .search-input {
   margin-top: 1.5rem;
   width: 68.2rem;
   height: 6.4rem;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 3rem;
+  gap: 4px;
+  overflow: hidden;
+  background: linear-gradient(270deg, rgba(94, 101, 219, 1) 0%, rgba(121, 255, 97, 1) 100%);
+  position: relative;
+}
+
+.search-input-bg {
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 8px);
+  height: calc(100% - 10px);
+  border-radius: 3rem;
+  display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+
+.search-list-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-search-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 14.5rem;
+  height: 5.4rem;
+  padding: 1rem;
+  font-size: 2rem;
+  margin-left: 2.4rem;
+}
+
+.btn-search-list::after {
+  content: '';
+  width: 1rem;
+  height: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(https://www.work24.go.kr/cm/static/images/ico10_select.svg) no-repeat 0 0 / contain;
+}
+
+.search-list {
+  position: absolute;
+  display: none;
+}
+
+.search-text-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 1rem;
+  gap: 5px;
 }
 
 .search-input input {
   width: 41.3rem;
   height: 4.5rem;
+  font-size: 2rem;
+}
+
+.search-icon-set {
+  width: 7.5rem;
+  height: 100%;
+  /* border: 1px solid #000; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.search-icon-set .keyboard::before {
+  content: '';
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: url(https://www.work24.go.kr/cm/static/images/main_new/ico_keyboard.svg) no-repeat 50% / contain;
+  background-color: transparent;
+}
+
+.search-icon-set .search::before {
+  content: '';
+  display: block;
+  width: 3.2rem;
+  height: 3.2rem;
+  background: url(https://www.work24.go.kr/cm/static/images/main_new/ico24_search.svg) no-repeat 50% / contain;
+  background-color: transparent;
 }
 
 .search-recommended {
   width: 68.2rem;
   height: 7.2rem;
   margin-top: 1.6rem;
-  /* border: 1px solid #000; */
   display: flex;
   justify-content: start;
   align-items: start;
@@ -312,4 +481,196 @@ section.search {
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
+}
+
+.login-form {
+  width: 50.6rem;
+  height: 25rem;
+  padding: 3.3rem 2.3rem;
+  border-radius: 8px;
+  border: 1px solid var(--col_green);
+}
+
+.login-text {
+  font-weight: 600;
+  font-size: 2rem;
+  letter-spacing: -0.7px;
+}
+
+.login-text i {
+  color: var(--col_green2);
+}
+
+.login-service {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1.6rem;
+  padding: 1.6rem 0;
+}
+
+.login-service li {
+  width: 50%;
+}
+
+.login-service li a {
+  display: block;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+.login-service li a::before {
+  content: '';
+  width: 2.4rem;
+  height: 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: no-repeat 0 0 / contain;
+}
+
+.login-service li:nth-child(1) a::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/ico24_login_guide01.svg);
+}
+
+.login-service li:nth-child(2) a::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/ico24_login_guide02.svg);
+}
+
+.login-service li:nth-child(3) a::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/ico24_login_guide03.svg);
+}
+
+.login-service li:nth-child(4) a::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/ico24_login_guide04.svg);
+}
+
+.login-form .btn-login {
+  display: block;
+  width: 100%;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15.88px;
+  letter-spacing: -0.32px;
+  background: var(--col_green);
+  border-radius: 8px;
+}
+
+.service {
+  width: 100%;
+  height: 30.8rem;
+  background: var(--col_box_bg);
+  padding-top: 4rem;
+}
+
+.service .main-title {
+  font-weight: 700;
+  font-size: 3.2rem;
+  line-height: 1.5;
+}
+
+.service-wrap {
+  width: 100%;
+  margin-top: 2.5rem;
+  /* background: aqua; */
+  position: relative;
+}
+
+.service-slide-wrap {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  width: 124.8rem;
+  display: flex;
+}
+
+.service-slider a {
+  display: block;
+  width: 17rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 1.65rem;
+  padding: 0 1.6rem;
+}
+
+.service-slider p {
+  word-break: keep-all;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  letter-spacing: -0.5px;
+  text-align: center;
+}
+
+.service-slider .round {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-slider .round img {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
+.service-btn {
+  position: absolute;
+  top: 25px;
+  width: 4rem;
+  height: 4rem;
+  background: no-repeat 50% / contain;
+  cursor: pointer;
+}
+
+.service-btn.service-btn-prev {
+  left: -100px;
+  z-index: 10;
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico40_arrow_circle_left.svg);
+}
+
+.service-btn.service-btn-next {
+  right: -100px;
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico40_arrow_circle_right.svg);
+}
+
+.service-wrap .swiper-pagination {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 5rem;
+  /* background: rgba(0, 0, 0, 0.5); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.swiper-pagination-bullet {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: var(--col_button);
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  display: block;
+  width: 32px;
+  height: 12px;
+  border-radius: 6px;
+  background: #000;
 }

@@ -6,6 +6,10 @@
     <title>hrd-net</title>
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="./js/script.js"></script>
   </head>
   <body>
     <!-- s: -->
@@ -102,16 +106,41 @@
             <div class="search-box">
               <h2 class="hidden">검색안내</h2>
               <div class="search-check">
-                <input type="checkbox" id="search-all" /><label for="search-all">통합검색</label>
-                <input type="checkbox" id="search-job" /><label for="search-job">일자리 검색</label>
-                <input type="checkbox" id="search-study" /><label for="search-study">직업훈련 검색</label>
+                <input type="checkbox" id="search-all" class="hidden" /><label for="search-all"
+                  ><span>통합검색</span></label
+                >
+                <input type="checkbox" id="search-job" class="hidden" /><label for="search-job"
+                  ><span>일자리 검색</span></label
+                >
+                <input type="checkbox" id="search-study" class="hidden" /><label for="search-study"
+                  ><span>직업훈련 검색</span></label
+                >
               </div>
               <div class="search-input">
-                <ul class="search-list"></ul>
-                <input type="text" placeholder="필요한 서비스를 찾아보세요" />
-                <div class="search-icon-set">
-                  <button type="button" class="search"><b class="hidden">검색</b></button>
-                  <button type="button" class="keyboard"><b class="hidden">가상키보드 실행</b></button>
+                <div class="search-input-bg">
+                  <div class="search-list-wrap">
+                    <button type="button" class="btn-search-list">전체</button>
+                    <ul class="search-list">
+                      <li>전체</li>
+                      <li>신고·신청</li>
+                      <li>정책</li>
+                      <li>채용</li>
+                      <li>기업</li>
+                      <li>훈련</li>
+                      <li>뉴스·자료</li>
+                      <li>직업·진로</li>
+                      <li>자격</li>
+                      <li>인재</li>
+                      <li>기타</li>
+                    </ul>
+                  </div>
+                  <div class="search-text-wrap">
+                    <input type="text" placeholder="필요한 서비스를 찾아보세요" />
+                    <div class="search-icon-set">
+                      <a href="#" class="keyboard"><b class="hidden">가상키보드 실행</b></a>
+                      <a href="#" class="search"><b class="hidden">검색</b></a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div class="search-recommended">
@@ -128,14 +157,14 @@
               </div>
             </div>
             <div class="login-form">
-              <p class="login-text">고용24에 <i>로그인</i> 하시면 아래의 서비스를 이용하실 수 있어요</p>
+              <strong class="login-text">고용24에 <i>로그인</i> 하시면 아래의 서비스를 이용할 수 있어요</strong>
               <ul class="login-service">
                 <li><a href="#">내 신청 조회</a></li>
                 <li><a href="#">증명서 발급</a></li>
                 <li><a href="#">놓치고 있는 혜택 확인</a></li>
                 <li><a href="#">잡케어(직업추천, 경력관리)</a></li>
               </ul>
-              <a href="#" class="login">로그인</a>
+              <a href="#" class="btn-login">로그인</a>
             </div>
           </div>
         </div>
@@ -146,75 +175,112 @@
         <div class="inner">
           <h2 class="main-title">자주찾는 서비스</h2>
           <div class="service-wrap">
-            <div class="swiper service-slider">
-              <!-- 스와이퍼 슬라이드 -->
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="./img/service-icon1.svg" alt="" class="service-img service-img1" />
-                    <p>실업인정 인터넷 신청</p>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="./img/service-icon2.svg" alt="" class="service-img service-img1" />
-                    <p>취업특강(1차 실업 인정교육 포함)</p>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="./img/service-icon3.svg" alt="" class="service-img service-img1" />
-                    <p>육아휴직 급여 신청</p>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="./img/service-icon4.svg" alt="" class="service-img service-img1" />
-                    <p>구직신청</p>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="./img/service-icon5.svg" alt="" class="service-img service-img1" />
-                    <p>구직촉진수당 신청</p>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="./img/service-icon6.svg" alt="" class="service-img service-img1" />
-                    <p>국민내일배움카드 발급신청</p>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="./img/service-icon7.svg" alt="" class="service-img service-img1" />
-                    <p>수급자격 신청자 온라인 교육</p>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="./img/service-icon8.svg" alt="" class="service-img service-img1" />
-                    <p>출산전후 휴가 급여 신청</p>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="./img/service-icon9.svg" alt="" class="service-img service-img1" />
-                    <p>고용허가제 신고</p>
-                  </a>
-                </div>
-                <div class="swiper-slide">
-                  <a href="#"
-                    ><img src="./img/service-icon10.svg" alt="" class="service-img service-img1" />
-                    <p>잡케어(직업추천, 경력관리)</p>
-                  </a>
+            <div class="service-slide-wrap">
+              <div class="swiper service-slider">
+                <!-- 스와이퍼 슬라이드 -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <a href="#"
+                      ><div class="round">
+                        <img src="./img/service-icon1.svg" alt="" class="service-img service-img1" />
+                      </div>
+                      <p>실업인정 <br />인터넷 신청</p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"
+                      ><div class="round">
+                        <img src="./img/service-icon2.svg" alt="" class="service-img service-img1" />
+                      </div>
+                      <p>
+                        취업특강(1차 실업<br />
+                        인정교육 포함)
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"
+                      ><div class="round">
+                        <img src="./img/service-icon3.svg" alt="" class="service-img service-img1" />
+                      </div>
+                      <p>
+                        육아휴직<br />
+                        급여 신청
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"
+                      ><div class="round">
+                        <img src="./img/service-icon4.svg" alt="" class="service-img service-img1" />
+                      </div>
+                      <p>구직신청</p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"
+                      ><div class="round">
+                        <img src="./img/service-icon5.svg" alt="" class="service-img service-img1" />
+                      </div>
+                      <p>구직촉진수당 신청</p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"
+                      ><div class="round">
+                        <img src="./img/service-icon6.svg" alt="" class="service-img service-img1" />
+                      </div>
+                      <p>
+                        국민내일배움카드<br />
+                        발급신청
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"
+                      ><div class="round">
+                        <img src="./img/service-icon7.svg" alt="" class="service-img service-img1" />
+                      </div>
+                      <p>
+                        수급자격 신청자<br />
+                        온라인 교육
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"
+                      ><div class="round">
+                        <img src="./img/service-icon8.svg" alt="" class="service-img service-img1" />
+                      </div>
+                      <p>
+                        출산전후 휴가<br />
+                        급여 신청
+                      </p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"
+                      ><div class="round">
+                        <img src="./img/service-icon9.svg" alt="" class="service-img service-img1" />
+                      </div>
+                      <p>고용허가제 신고</p>
+                    </a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#"
+                      ><div class="round">
+                        <img src="./img/service-icon10.svg" alt="" class="service-img service-img1" />
+                      </div>
+                      <p>잡케어<br />(직업추천, 경력관리)</p>
+                    </a>
+                  </div>
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
-              <div class="service-btn service-btn-prev"></div>
-              <div class="service-btn service-btn-next"></div>
             </div>
+            <div class="swiper-pagination"></div>
+            <div class="service-btn service-btn-prev"></div>
+            <div class="service-btn service-btn-next"></div>
           </div>
         </div>
       </section>
