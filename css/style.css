@@ -99,6 +99,28 @@ hr,
   z-index: 11;
 }
 
+.header-dim {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: -10;
+  display: none;
+}
+
+#header.active::after {
+  content: '';
+  position: absolute;
+  top: 19.2rem;
+  left: 0;
+  background: var(--col_white);
+  width: 100%;
+  height: 26rem;
+  user-select: none;
+  pointer-events: none;
+  z-index: -5;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 .header-top p {
   height: 3.6rem;
   width: 100%;
@@ -199,16 +221,6 @@ hr,
   height: 4.8rem;
 }
 
-.gnb {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.gnb > li {
-  position: relative;
-}
-
 #header nav > a {
   display: flex;
   justify-content: center;
@@ -225,9 +237,60 @@ hr,
   background: url(https://www.work24.go.kr/cm/static/images/main_new/ico32_category.svg) no-repeat 0 0 / contain;
 }
 
+.gnb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gnb > li {
+  position: relative;
+  /* border: 1px solid #000; */
+}
+
+.gnb > li > a b {
+  position: relative;
+  display: block;
+  padding: 2.4rem 0;
+}
+
+.gnb > li > a b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: var(--col_green2);
+  transform: translateY(-50%);
+}
+
+.gnb > li:hover > a {
+  color: var(--col_green2);
+}
+
+.gnb > li:hover > a b::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: var(--col_green2);
+  animation: width 0.5s both;
+}
+
+@keyframes width {
+  100% {
+    width: calc(100%);
+  }
+
+  0% {
+    width: 0;
+  }
+}
+
 .gnb > li > a {
   display: block;
-  padding: 2.4rem 4.4rem;
+  padding: 0 4.4rem;
   height: 7.6rem;
   font-size: 2rem;
   font-weight: 600;
@@ -236,21 +299,48 @@ hr,
 .submenu {
   position: absolute;
   top: 100%;
-  left: 0;
   width: 100%;
+  left: 0%;
   height: 20rem;
   display: flex;
   flex-direction: column;
   justify-content: start;
-  align-items: center;
+  align-items: start;
   /* background: pink; */
   display: none;
+  padding: 2.4rem 0;
 }
 
 .submenu li a {
   display: block;
-  padding: 6px 0;
   line-height: 1.375;
+  position: relative;
+  padding: 1.2rem 0;
+}
+
+.submenu li a i {
+  display: inline-block;
+  text-align: start;
+  position: relative;
+  margin-left: 4.4rem;
+}
+
+.submenu li:hover a {
+  color: var(--col_green2);
+}
+
+.submenu li a i::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--col_green2);
+}
+
+.submenu li:hover a i::after {
+  animation: width 0.5s both;
 }
 
 section.search {
@@ -291,6 +381,7 @@ section.search {
   font-size: 20px;
   color: var(--col_button);
   gap: 5px;
+  cursor: pointer;
 }
 
 .search-check label::before {
@@ -304,8 +395,14 @@ section.search {
   background: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_default.png) no-repeat 50% / contain;
 }
 
-.search-check label.active {
+.search-check label.active::before {
   background-image: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_fill_blue.png);
+}
+.search-check label.active:nth-of-type(2)::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_fill_green.png);
+}
+.search-check label.active:nth-of-type(3)::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/radio_unify_search_fill_orange.png);
 }
 
 .search-check label span {
@@ -323,6 +420,46 @@ section.search {
   left: 0;
   background: var(--col_blue);
   width: 0;
+  height: 6px;
+  transition: 0.3s;
+}
+
+.search-check label:nth-of-type(1) span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--col_blue);
+  width: 0;
+  height: 6px;
+  transition: 0.3s;
+}
+
+.search-check label:nth-of-type(2) span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--col_green);
+  width: 0;
+  height: 6px;
+  transition: 0.3s;
+}
+
+.search-check label:nth-of-type(3) span::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: var(--col_orange);
+  width: 0;
+  height: 6px;
+  transition: 0.3s;
+}
+
+.search-check label.active span::after {
+  content: '';
+  width: 100%;
   height: 6px;
   transition: 0.3s;
 }
@@ -388,6 +525,7 @@ section.search {
   font-size: 2rem;
   margin-left: 2.4rem;
   background: var(--col_white);
+  cursor: pointer;
 }
 
 .btn-search-list::after {
@@ -464,6 +602,17 @@ section.search {
   font-weight: 600;
   word-break: keep-all;
   margin: 1rem 2.4rem 0 2.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+
+.search-recommended > p::before {
+  content: '';
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(https://www.work24.go.kr/cm/static/images/ico32_search.svg) no-repeat 50% / contain;
 }
 
 .recommended-list {
@@ -632,6 +781,10 @@ section.search {
   align-items: center;
 }
 
+.service-slider .round:hover {
+  background: var(--col_green);
+}
+
 .service-slider .round img {
   width: 4.8rem;
   height: 4.8rem;
@@ -656,7 +809,10 @@ section.search {
   background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico40_arrow_circle_right.svg);
 }
 
-.service-wrap .swiper-pagination {
+.service-wrap .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
   position: absolute;
   left: 0;
   bottom: -4rem;
@@ -704,6 +860,7 @@ section.search {
   justify-content: start;
   align-items: center;
   gap: 8px;
+  cursor: pointer;
 }
 
 .btn-user {
@@ -987,15 +1144,66 @@ section.search {
 
 .banner-wrap {
   width: 124.8rem;
-  height: 100%;
-  overflow: hidden;
+  height: 27.5rem;
   position: relative;
+  /* border: 1px solid #000; */
 }
 
 .banner-wrap figure {
-  width: 100%;
+  width: 90%;
   height: 100%;
-  object-fit: contain;
+  margin: 0 auto;
+}
+
+.btn-banner {
+  position: absolute;
+  top: 40%;
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-50%);
+  background: no-repeat 50% / contain;
+  cursor: pointer;
+}
+
+.btn-banner-prev {
+  left: 0;
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico40_arrow_circle_left.svg);
+}
+
+.btn-banner-next {
+  right: 0;
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico40_arrow_circle_right.svg);
+}
+
+.banner-wrap .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  position: absolute;
+  width: 100%;
+  height: 5rem;
+  bottom: -2rem;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.banner-wrap .swiper-pagination-bullet {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: var(--col_button);
+}
+
+.banner-wrap .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  display: block;
+  width: 32px;
+  height: 12px;
+  border-radius: 6px;
+  background: #000;
 }
 
 .guide {
@@ -1093,4 +1301,522 @@ section.search {
   text-decoration: underline;
   text-decoration-thickness: 4px;
   text-decoration-color: rgba(255, 255, 255, 0.7);
+}
+
+.news {
+  width: 100%;
+  height: 83rem;
+  position: relative;
+}
+
+.news .title-area {
+  margin-top: 3.2rem;
+}
+
+.new-btns {
+  width: 100%;
+  margin-top: 1px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-news {
+  display: block;
+  padding: 0 1.6rem;
+  border-radius: 3rem;
+  border: 1px solid var(--col_button);
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 2.5;
+  background: var(--col_white);
+}
+
+.btn-news.active {
+  background: var(--col_green);
+  font-weight: 600;
+  border-color: var(--col_green);
+}
+
+.news-wrap {
+  width: 100%;
+  padding: 3.2rem 0 3.5rem;
+  /* background: khaki; */
+  min-height: 62rem;
+  position: relative;
+}
+
+.news-list {
+  width: 100%;
+  height: 55.6rem;
+  column-width: 29.4rem;
+  column-gap: 2rem;
+  /* border: 1px solid red; */
+  padding: 3px;
+  margin-top: 3px;
+}
+
+.news-list li {
+  width: 29.4rem;
+  padding: 3.3rem 2.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  break-inside: avoid;
+  margin-bottom: 2.4rem;
+  border-radius: 8px;
+  transition: 0.4s;
+}
+
+.news-list li:nth-child(odd) {
+  height: 32.4rem;
+}
+
+.news-list li:nth-child(even) {
+  height: 18.4rem;
+}
+
+.news-list li:nth-child(3) {
+  height: 18.4rem;
+}
+
+.news-list li:nth-child(4) {
+  height: 32.4rem;
+}
+
+.news-list li:hover {
+  border-color: var(--col_green);
+  outline: 2px solid var(--col_green);
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.news-list li p {
+  display: flex;
+  font-weight: 600;
+  font-size: 1.4rem;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+.news-list li p::before {
+  content: '';
+  width: 2.4rem;
+  height: 2.4rem;
+  background: no-repeat 50%;
+}
+
+.news-list li dl {
+  margin-top: 1.2rem;
+}
+
+.news-list li dl dt {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.news-list li dl dd {
+  margin-top: 8px;
+  font-size: 1.4rem;
+  color: var(--col_gray);
+}
+
+.news-list li dl dd + dd {
+  font-size: 1.6rem;
+  color: var(--col_gray);
+  line-height: 1.625;
+  color: #333;
+}
+
+.news-list li:nth-child(1) p::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico_24_news.svg);
+}
+
+.news-list li:nth-child(2) p::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico_24_news.svg);
+}
+
+.news-list li:nth-child(3) p::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico_24_news.svg);
+}
+
+.news-list li:nth-child(4) p::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico24_loudspeaker.svg);
+}
+
+.news-list li:nth-child(5) p::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico24_loudspeaker.svg);
+}
+
+.news-list li:nth-child(6) p::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico24_loudspeaker.svg);
+}
+
+.news-list li:nth-child(7) p::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico24_pds.svg);
+}
+
+.news-list li:nth-child(8) p::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico24_pds.svg);
+}
+
+.news-wrap .swiper-pagination-bullet {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 6px;
+  background: var(--col_button);
+}
+
+.news-wrap .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  display: block;
+  width: 32px;
+  height: 12px;
+  border-radius: 6px;
+  background: #000;
+}
+
+#footer {
+  background: var(--col_bg);
+}
+
+#footer .foot-top {
+  /* background: var(--col_blue); */
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0 33.6rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 5.6rem;
+  background: var(--col_white);
+}
+
+.foot-top button {
+  width: 20rem;
+  height: 5.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5rem 1.5rem;
+  background: var(--col_white);
+  border-radius: 4px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  position: relative;
+  cursor: pointer;
+}
+
+.foot-top button::after {
+  content: '';
+  width: 2.4rem;
+  height: 2.4rem;
+  background: url(https://www.work24.go.kr/cm/static/images/main_new/ico24_plus.svg) no-repeat 50%;
+  transition: 0.3s;
+}
+
+.foot-top > div {
+  position: relative;
+}
+
+.foot-top .btn-extra-site {
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.foot-top ul {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  background: var(--col_white);
+  z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 25rem;
+  overflow-y: scroll;
+  display: none;
+}
+
+.foot-top ul li {
+  width: 100%;
+}
+
+.foot-top ul li a {
+  display: block;
+  width: 100%;
+  padding: 5px 0;
+}
+
+.foot-top button.active {
+  text-decoration: underline;
+}
+
+.foot-top button.active::after {
+  background-image: url(https://www.work24.go.kr/cm/static/images/main_new/ico24_minus.svg);
+}
+
+.foot-middle {
+  padding: 4rem 0 2.4rem;
+}
+
+.foot-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.foot-con-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.foot-logo {
+  width: 10.2rem;
+  height: 3.2rem;
+}
+
+.foot-adress {
+  margin-top: 2.4rem;
+  line-height: 1.75;
+}
+
+.foot-adress p + p {
+  margin-top: 4px;
+}
+
+.foot-adress strong {
+  font-weight: 600;
+}
+
+.foot-warning {
+  margin-top: 2.4rem;
+  line-height: 1.75;
+  color: var(--col_body);
+}
+
+.foot-warning strong {
+  font-weight: 600;
+  color: #000;
+}
+
+.foot-con-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  font-weight: 600;
+  gap: 1.6rem;
+}
+
+.foot-con-right a {
+  display: block;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 4px;
+}
+
+.foot-con-right a::after {
+  content: '';
+  width: 1.6rem;
+  height: 1.6rem;
+  background: url(https://www.work24.go.kr/cm/static/images/main_new/ico16_arrow_right.svg) no-repeat 50%;
+}
+
+.foot-bottom {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 2rem 0;
+}
+
+.foot-bottom-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.bottom-list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.bottom-list li a {
+  /* border: 1px solid #000; */
+  display: block;
+  padding: 1rem 1.2rem;
+  color: var(--col_p);
+}
+
+.bottom-list li a i {
+  font-weight: 600;
+  color: var(--col_blue);
+}
+
+.bottom-list li:first-child a {
+  padding-left: 0;
+}
+
+.copyright {
+  margin-top: 2rem;
+  color: var(--col_p);
+  font-size: 1.4rem;
+}
+
+.foot-bottom-right {
+  width: 13.9rem;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.foot-bottom .whth-gov {
+  background: var(--col_white);
+  height: 4rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 8px;
+}
+
+.foot-bottom .whth-gov .gov-logo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 8px;
+}
+
+.foot-bottom .whth-gov p {
+  font-size: 1.4rem;
+}
+
+aside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 5.2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  padding: 12rem 1rem;
+  z-index: 999;
+  background: var(--col_white);
+  border-left: 1px solid var(--col_green);
+}
+
+aside:hover {
+  width: 20rem;
+}
+
+aside > a::before {
+  content: '';
+  display: block;
+  width: 3.4rem;
+  height: 2.3rem;
+  background: url(https://www.work24.go.kr/cm/static/images/quick_tl.png) no-repeat 50%;
+}
+
+.quickmenu {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: end;
+  gap: 2.4rem;
+}
+
+.quickmenu li a {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: end;
+  align-items: center;
+  gap: 8px;
+}
+
+.quickmenu li a::before {
+  content: '';
+  display: block;
+  width: 2.3rem;
+  height: 2.4rem;
+  background: no-repeat 50%;
+}
+
+.quickmenu li:nth-child(1) a::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/ico24_home_center.svg);
+}
+
+.quickmenu li:nth-child(2) a::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/ico24_faq.svg);
+}
+
+.quickmenu li:nth-child(3) a::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/ico24_pc.svg);
+}
+
+.quickmenu li:nth-child(4) a::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/ico24_task_normal.svg);
+}
+
+.quickmenu li:nth-child(5) a::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/ico24_home_smile.svg);
+}
+
+.quickmenu li:nth-child(6) a::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/ico24_cal_normal.svg);
+}
+
+.quickmenu li:nth-child(7) a::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/ico24_coin.svg);
+}
+
+.quickmenu li:nth-child(8) a::before {
+  background-image: url(https://www.work24.go.kr/cm/static/images/ico_fax_A.svg);
+}
+
+.buttom-list {
+  position: fixed;
+  bottom: 2rem;
+  right: 8.4rem;
+  width: 6rem;
+  height: 22.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.btn-side {
+  width: 6rem;
+  height: 6rem;
+  padding: 1rem 1rem;
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: 1.58rem;
+  letter-spacing: -0.32px;
+  color: var(--col_body);
+  background: var(--col_white);
+  cursor: pointer;
+}
+
+.buttom-list .btn-login {
+  background: var(--col_green);
+}
+
+.buttom-list .btn-guide {
+  background: #8ca8fe;
+  padding: 1rem 1.6rem;
+  line-height: 1.2;
+}
+
+.buttom-list .btn-go-top {
+  background-image: url(https://www.work24.go.kr/cm/static/images/btn_quick_top.png);
 }

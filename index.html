@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
 
+    <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollToPlugin.min.js"></script>
     <script src="./js/script.js"></script>
   </head>
   <body>
     <!-- s: -->
     <header id="header">
+      <div class="header-dim"></div>
       <nav class="skip hidden">
         <a href="#">본문 바로가기</a>
         <a href="#">주메뉴 바로가기</a>
@@ -49,48 +52,82 @@
         </h1>
         <ul class="gnb">
           <li>
-            <a href="#"> 채용정보 </a>
+            <a href="#"> <b>채용정보</b> </a>
             <ul class="submenu submenu1">
               <li>
-                <a href="#">일자리 찾기</a>
+                <a href="#"><i>일자리 찾기</i></a>
               </li>
-              <li><a href="#">구직신청</a></li>
-              <li><a href="#">채용행사</a></li>
-              <li><a href="#">강소기업</a></li>
+              <li>
+                <a href="#"><i>구직신청</i></a>
+              </li>
+              <li>
+                <a href="#"><i>채용행사</i></a>
+              </li>
+              <li>
+                <a href="#"><i>강소기업</i></a>
+              </li>
             </ul>
           </li>
           <li>
-            <a href="#"> 취업지원 </a>
+            <a href="#"> <b>취업지원</b> </a>
             <ul class="submenu submenu2">
-              <li><a href="#">취업역량강화</a></li>
-              <li><a href="#">취업가이드</a></li>
-              <li><a href="#">국민취업지원제도</a></li>
-              <li><a href="#">미래내일 일경험</a></li>
-              <li><a href="#">취업지원금</a></li>
+              <li>
+                <a href="#"><i>취업역량강화</i></a>
+              </li>
+              <li>
+                <a href="#"><i>취업가이드</i></a>
+              </li>
+              <li>
+                <a href="#"><i>국민취업지원제도</i></a>
+              </li>
+              <li>
+                <a href="#"><i>미래내일 일경험</i> </a>
+              </li>
+              <li>
+                <a href="#"><i>취업지원금</i></a>
+              </li>
             </ul>
           </li>
           <li>
-            <a href="#"> 실업급여 </a>
+            <a href="#"> <b>실업급여</b> </a>
             <ul class="submenu submenu3">
-              <li><a href="#">수급자격</a></li>
-              <li><a href="#">실업인정</a></li>
-              <li><a href="#">취업촉진수당</a></li>
-              <li><a href="#">이직확인서</a></li>
+              <li>
+                <a href="#"><i>수급자격</i></a>
+              </li>
+              <li>
+                <a href="#"><i>실업인정</i></a>
+              </li>
+              <li>
+                <a href="#"><i>취업촉진수당</i></a>
+              </li>
+              <li>
+                <a href="#"><i>이직확인서</i></a>
+              </li>
             </ul>
           </li>
           <li>
-            <a href="#"> 직업 능력 개발 </a>
+            <a href="#"> <b>직업 능력 개발</b> </a>
             <ul class="submenu submenu4">
-              <li><a href="#">훈련찾기·신청</a></li>
-              <li><a href="#">국민내일배움카드</a></li>
-              <li><a href="#">훈련기관·강사</a></li>
+              <li>
+                <a href="#"><i>훈련찾기·신청</i></a>
+              </li>
+              <li>
+                <a href="#"><i>국민내일배움카드</i></a>
+              </li>
+              <li>
+                <a href="#"><i>훈련기관·강사</i></a>
+              </li>
             </ul>
           </li>
           <li>
-            <a href="#"> 출산휴가·육아휴직 </a>
+            <a href="#"> <b>출산휴가·육아휴직</b> </a>
             <ul class="submenu submenu5">
-              <li><a href="#">출산휴가</a></li>
-              <li><a href="#">육아휴직</a></li>
+              <li>
+                <a href="#"><i>출산휴가</i></a>
+              </li>
+              <li>
+                <a href="#"><i>육아휴직</i></a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -279,9 +316,9 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
             <div class="service-btn service-btn-prev"></div>
             <div class="service-btn service-btn-next"></div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
@@ -514,10 +551,10 @@
                   </figure>
                 </div>
               </div>
-              <div class="swiper-pagination"></div>
               <div class="btn-banner btn-banner-prev"></div>
               <div class="btn-banner btn-banner-next"></div>
               <button type="button" class="btn-slide-controll"></button>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
         </div>
@@ -590,102 +627,1399 @@
             <h2 class="main-title">고용24 소식</h2>
           </div>
           <div class="new-btns">
-            <button type="button" class="btn-news btn-news1">전체</button>
-            <button type="button" class="btn-news btn-news2">뉴스</button>
-            <button type="button" class="btn-news btn-news3">공지사항</button>
-            <button type="button" class="btn-news btn-news4">서식자료실</button>
+            <a href="#btn-news1" class="btn-news active">전체</a>
+            <a href="#btn-news2" class="btn-news">뉴스</a>
+            <a href="#btn-news3" class="btn-news">공지사항</a>
+            <a href="#btn-news4" class="btn-news">서식자료실</a>
           </div>
-          <div class="news-wrap">
-            <div class="swiper news-slider">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <ul class="news-list">
-                    <li>
-                      <a href="#">
-                        <p>뉴스</p>
-                        <dl>
-                          <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
-                          <dd>2025-03-18</dd>
-                          <dd>
-                            한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항 항공지원센터
-                            2층에 위치한 항공일자리 취업지원센터에서 국토…
-                          </dd>
-                        </dl>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>뉴스</p>
-                        <dl>
-                          <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
-                          <dd>2025-03-18</dd>
-                        </dl>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>뉴스</p>
-                        <dl>
-                          <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
-                          <dd>2025-03-18</dd>
-                        </dl>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>공지</p>
-                        <dl>
-                          <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
-                          <dd>2025-03-19</dd>
-                          <dd>
-                            안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
-                            구직자와 외국인 근로자를 위해 자가 역량진단을 개…
-                          </dd>
-                        </dl>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>공지</p>
-                        <dl>
-                          <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
-                          <dd>2025-03-13</dd>
-                        </dl>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>공지</p>
-                        <dl>
-                          <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
-                          <dd>2025-03-11</dd>
-                        </dl>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>자료</p>
-                        <dl>
-                          <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
-                          <dd>2025-01-03</dd>
-                        </dl>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#">
-                        <p>자료</p>
-                        <dl>
-                          <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
-                          <dd>2025-01-03</dd>
-                        </dl>
-                      </a>
-                    </li>
-                  </ul>
+          <div class="news-tab">
+            <div id="btn-news1" class="news-con">
+              <div class="news-wrap">
+                <div class="swiper news-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="news-btn news-btn-prev"></div>
+                  <div class="news-btn news-btn-next"></div>
                 </div>
+                <div class="swiper-pagination"></div>
               </div>
-              <div class="swiper-pagination"></div>
-              <div class="news-btn news-btn-prev"></div>
-              <div class="news-btn news-btn-prev"></div>
+            </div>
+            <div id="btn-news2" class="news-con">
+              <div class="news-wrap">
+                <div class="swiper news-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="news-btn news-btn-prev"></div>
+                  <div class="news-btn news-btn-next"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div id="btn-news3" class="news-con">
+              <div class="news-wrap">
+                <div class="swiper news-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="news-btn news-btn-prev"></div>
+                  <div class="news-btn news-btn-next"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+            <div id="btn-news4" class="news-con">
+              <div class="news-wrap">
+                <div class="swiper news-slider">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="swiper-slide">
+                      <ul class="news-list">
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>한국공항공사, ‘공항일자리 채용의 날’ 개최</dt>
+                              <dd>2025-03-18</dd>
+                              <dd>
+                                한국공항공사가 ‘공항일자리 채용의 날’을 운영한다. 한국공항공사는 20일 김포공항
+                                항공지원센터 2층에 위치한 항공일자리 취업지원센터에서 국토…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>광양시, 도시숲관리단 기간제근로 자 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>뉴스</p>
+                            <dl>
+                              <dt>CJ올리브영, 2025 상반기 신입사 원 채용</dt>
+                              <dd>2025-03-18</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>EPS 외국인 근로자 자가 역량진단 홍보</dt>
+                              <dd>2025-03-19</dd>
+                              <dd>
+                                안녕하세요.외국인고용관리시스템 담 당자입니다.한국산업인력공단에서 EP S 취업에 관심 있는
+                                구직자와 외국인 근로자를 위해 자가 역량진단을 개…
+                              </dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>2025년 고용24 서비스 모니터링 단 모집</dt>
+                              <dd>2025-03-13</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>공지</p>
+                            <dl>
+                              <dt>(조치완료, 10:45) 공동인증서 장애 안내</dt>
+                              <dd>2025-03-11</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제24호의2 서식] 일가정 양 립 환경개선 지원금(일생활균형)</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#">
+                            <p>자료</p>
+                            <dl>
+                              <dt>[별지 제4호의3 서식] 일가정 양립 환경개선(일생활균형 인프라) 참…</dt>
+                              <dd>2025-01-03</dd>
+                            </dl>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="news-btn news-btn-prev"></div>
+                  <div class="news-btn news-btn-next"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -695,72 +2029,141 @@
     <!-- //e: -->
     <!-- s: -->
     <footer id="footer">
-      <div class="inner">
-        <div class="foot-top">
-          <ul class="family-list"></ul>
-          <ul class="extra-list"></ul>
+      <div class="foot-top">
+        <div class="family-site-wrap">
+          <button type="button" class="btn-family-site">패밀리사이트</button>
+          <ul class="family-list">
+            <li><a href="#">외국인고용(외국인전용)</a></li>
+            <li><a href="#">고용행정통계</a></li>
+            <li><a href="#">고용복지센터</a></li>
+            <li><a href="#">장애인고용포털</a></li>
+            <li><a href="#">사이버진로교육센터</a></li>
+            <li><a href="#">여성새로일하기센터</a></li>
+            <li><a href="#">가사랑</a></li>
+            <li><a href="#">고용형태공시제</a></li>
+          </ul>
         </div>
-        <div class="foot-con">
-          <div class="foot-con-left">
-            <div class="foot-con-logo">
-              <img src="https://www.work24.go.kr/cm/static/images/main_new/h1_ci.png" alt="" />
-            </div>
-            <div class="foot-adress">
-              <p>(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</p>
-              <p>
-                <strong>홈페이지 전산 이용 문의 1577-7114</strong> (유료, 한국고용정보원 고객상담센터, 평일 09시 ~ 18시)
-              </p>
-              <p>
-                <strong>고용·노동 분야 제도 문의 국번없이 1350</strong> (유료, 고용노동부 고객상담센터, 평일 09시 ~
-                18시)
-              </p>
-            </div>
-            <div class="foot-warning">
-              <p>고용24는 <strong>통신판매중개자</strong>이며, 통신판매의 당사자가 아닙니다.</p>
-              <p>
-                상품(훈련), 상품(훈련)정보, 거래에 관한 <strong>의무와 책임은 판매자(훈련기관)</strong>에게 있습니다.
-              </p>
-            </div>
+        <div class="extra-site-wrap">
+          <button type="button" class="btn-extra-site">유관기관</button>
+          <ul class="extra-list">
+            <li><a href="#">사회보험정보연계센터</a></li>
+            <li><a href="#">근로복지공단</a></li>
+            <li><a href="#">한국산업인력공단</a></li>
+            <li><a href="#">직무능력표준</a></li>
+            <li><a href="#">CQ넷</a></li>
+            <li><a href="#">한국기술교육대학교</a></li>
+            <li><a href="#">한국폴리텍대학</a></li>
+            <li><a href="#">하이코리아</a></li>
+            <li><a href="#">외국국적동포(H-2)취업교육홈페이지</a></li>
+            <li><a href="#">외국인인력상담센터</a></li>
+            <li><a href="#">안전보건공단</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="inner">
+        <div class="foot-middle">
+          <div class="foot-logo">
+            <img src="https://www.work24.go.kr/cm/static/images/main_new/h1_ci.png" alt="" />
           </div>
-          <div class="foot-con-right">
-            <a href="#">이용안내</a>
-            <a href="#">원격지원</a>
+          <div class="foot-con">
+            <div class="foot-con-left">
+              <div class="foot-adress">
+                <p>(27740) 충청북도 음성군 맹동면 태정로 6 한국고용정보원</p>
+                <p>
+                  <strong>홈페이지 전산 이용 문의 1577-7114</strong> (유료, 한국고용정보원 고객상담센터, 평일 09시 ~
+                  18시)
+                </p>
+                <p>
+                  <strong>고용·노동 분야 제도 문의 국번없이 1350</strong> (유료, 고용노동부 고객상담센터, 평일 09시 ~
+                  18시)
+                </p>
+              </div>
+              <div class="foot-warning">
+                <p>고용24는 <strong>통신판매중개자</strong>이며, 통신판매의 당사자가 아닙니다.</p>
+                <p>
+                  상품(훈련), 상품(훈련)정보, 거래에 관한 <strong>의무와 책임은 판매자(훈련기관)</strong>에게 있습니다.
+                </p>
+              </div>
+            </div>
+            <div class="foot-con-right">
+              <a href="#">이용안내</a>
+              <a href="#">원격지원</a>
+            </div>
           </div>
         </div>
         <div class="foot-bottom">
-          <ul class="bottom-list">
-            <li><a href="#">이용약관</a></li>
-            <li><a href="#">개인정보처리방침</a></li>
-            <li><a href="#">이메일무단수집거부</a></li>
-            <li><a href="#">저작권보호정책</a></li>
-            <li><a href="#">오픈API 서비스</a></li>
-            <li><a href="#">화상상담 관리자</a></li>
-            <li><a href="#">사이트맵</a></li>
-            <li><a href="#">챗봇</a></li>
-          </ul>
-          <p class="copyright">
-            © 2024 Ministry of Employment and Labor, Korea Employment Information Service. All rights reserved.
-          </p>
-          <p>이 누리집은 고용노동부와 고용노동부 산하기관 한국고용정보원의 누리집 입니다.</p>
+          <div class="foot-bottom-con">
+            <div class="foot-bottom-left">
+              <ul class="bottom-list">
+                <li><a href="#">이용약관</a></li>
+                <li>
+                  <a href="#"><i>개인정보처리방침</i></a>
+                </li>
+                <li><a href="#">이메일무단수집거부</a></li>
+                <li><a href="#">저작권보호정책</a></li>
+                <li><a href="#">오픈API 서비스</a></li>
+                <li><a href="#">화상상담 관리자</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">챗봇</a></li>
+              </ul>
+              <p class="copyright">
+                © 2024 Ministry of Employment and Labor, Korea Employment Information Service. All rights reserved.
+              </p>
+            </div>
+            <div class="foot-bottom-right">
+              <figure><img src="https://www.work24.go.kr/cm/static/images/marks/WA_Mark.png" alt="" /></figure>
+              <figure>
+                <img src="https://www.work24.go.kr/cm/static/images/marks/eprivacyplus_text.png" alt="" />
+              </figure>
+            </div>
+          </div>
+          <div class="whth-gov">
+            <div class="gov-logo">
+              <figure>
+                <img src="https://www.work24.go.kr/cm/static/images/main_241120/footer_ci02.png" alt="고용노동부" />
+              </figure>
+              <figure>
+                <img src="https://www.work24.go.kr/cm/static/images/main_241120/footer_ci03.png" alt="한국고용정보원" />
+              </figure>
+            </div>
+            <p>이 누리집은 고용노동부와 고용노동부 산하기관 한국고용정보원의 누리집 입니다.</p>
+          </div>
         </div>
       </div>
     </footer>
     <aside>
-      <a href="#">quickmenu </a>
+      <a href="#"><i class="hidden">quickmenu</i> </a>
       <ul class="quickmenu">
-        <li><a href="#">고용센터찾기</a></li>
-        <li><a href="#">자주하는 질문</a></li>
-        <li><a href="#">이용안내</a></li>
-        <li><a href="#">정책/제도</a></li>
-        <li><a href="#">고객센터</a></li>
-        <li><a href="#">모의계산</a></li>
-        <li><a href="#">직종별 임금정보</a></li>
+        <li>
+          <a href="#"><i class="hidden">고용센터찾기</i></a>
+        </li>
+        <li>
+          <a href="#"><i class="hidden">자주하는 질문</i></a>
+        </li>
+        <li>
+          <a href="#"><i class="hidden">이용안내</i></a>
+        </li>
+        <li>
+          <a href="#"><i class="hidden">정책/제도</i></a>
+        </li>
+        <li>
+          <a href="#"><i class="hidden">고객센터</i></a>
+        </li>
+        <li>
+          <a href="#"><i class="hidden">모의계산</i></a>
+        </li>
+        <li>
+          <a href="#"><i class="hidden">직종별 임금정보</i></a>
+        </li>
+        <li>
+          <a href="#"><i class="hidden">전자팩스 수신조회</i></a>
+        </li>
       </ul>
     </aside>
     <div class="buttom-list">
       <button type="button" class="btn-side btn-login">로그인</button>
       <button type="button" class="btn-side btn-guide">이용안내</button>
-      <button type="button" class="btn-side btn-top"><b class="hidden">top</b></button>
+      <button type="button" class="btn-side btn-go-top"></button>
     </div>
     <!-- //e: -->
   </body>
